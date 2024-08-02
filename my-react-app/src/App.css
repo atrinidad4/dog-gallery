@@ -1,0 +1,145 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  background-color: #f0f0f0;
+  overflow: auto; 
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  background-color: white; 
+  max-width: 90%; 
+  max-height: 90vh; 
+  overflow: auto; 
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold; 
+  color: #0a1a5f; 
+  margin-bottom: 20px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.refresh-button {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+.refresh-button:active {
+  background-color: #961396; 
+  transform: scale(0.95); 
+}
+
+.refresh-button:hover {
+  background-color: #961396;
+}
+
+.dog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dog-item {
+  display: flex;
+  flex-direction: column; 
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  height: 250px; 
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.dog-item img {
+  width: 100%;
+  height: 60%; 
+  object-fit: cover; 
+}
+
+
+.dog-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dog-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 10px;
+  background-color: #f9f9f9;
+  position: absolute; 
+  bottom: 0;
+  width: 100%; 
+}
+
+
+button {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.like-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.like-button:hover {
+  background-color: #0056b3;
+}
+
+.like-button.liked {
+  background-color: #28a745;
+}
