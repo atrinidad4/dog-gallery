@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css'; // Import the CSS file
+import './App.css'; 
 
 const API_URL = 'https://dog.ceo/api/breeds/image/random/12';
 
@@ -16,7 +16,7 @@ function App() {
     const response = await fetch(API_URL);
     const data = await response.json();
     setDogs(data.message);
-    // Initialize likes for each dog
+ 
     setLikes(data.message.reduce((acc, _, index) => ({ ...acc, [index]: 0 }), {}));
   };
 
@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className="title">Dog Gallery</div> {/* Title added here */}
+      <div className="title">Dog Gallery</div>
       <div className="search-container">
         <input
           className="search-input"
